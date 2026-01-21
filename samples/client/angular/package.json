@@ -13,7 +13,9 @@
     "serve:ssr:contact": "node dist/contact/server/server.mjs",
     "build:lit": "cd ../../../renderers/lit && npm i && npm run build",
     "serve:agent:restaurant": "cd ../../agent/adk/restaurant_finder && uv run .",
-    "demo:restaurant": "npm run build:lit && concurrently -k -n \"AGENT,WEB\" -c \"magenta,blue\" \"npm run serve:agent:restaurant\" \"npm start -- restaurant\""
+    "serve:agent:hotel": "cd ../../agent/adk/hotel_finder && uv run .",
+    "demo:restaurant": "npm run build:lit && concurrently -k -n \"AGENT,WEB\" -c \"magenta,blue\" \"npm run serve:agent:restaurant\" \"npm start -- restaurant\"",
+    "demo:hotel": "npm run build:lit && concurrently -k -n \"AGENT,WEB\" -c \"cyan,blue\" \"npm run serve:agent:hotel\" \"npm start -- hotel\""
   },
   "prettier": {
     "printWidth": 100,
